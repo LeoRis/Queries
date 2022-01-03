@@ -24,14 +24,14 @@ namespace Queries
 
             // Get all courses in Level 1
 
-            var query2 =
+            var query1 =
                 from c in context.Courses
                 where c.Level == 1
                 select c;
 
             // Ordering
 
-            var query3 =
+            var query2 =
                 from c in context.Courses
                 where c.Author.Id == 1
                 orderby c.Level descending, c.Name
@@ -39,7 +39,7 @@ namespace Queries
 
             // Projection
 
-            var query1 =
+            var query3 =
                 from c in context.Courses
                 where c.Author.Id == 1
                 orderby c.Level descending, c.Name
